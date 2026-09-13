@@ -10,8 +10,9 @@ const stack: TechItem[] = [
   { name: 'Tailwind CSS v4', description: 'Utility-first styling via the official Vite plugin.' },
 ]
 
-useHead({
+usePageSeo({
   title: 'About',
+  description: 'Learn about the tech stack behind this project: Nuxt 4, TypeScript and Tailwind CSS v4.',
 })
 </script>
 

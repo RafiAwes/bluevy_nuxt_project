@@ -1,0 +1,73 @@
+import type { GitHubUser } from '~~/shared/types/user'
+
+/**
+ * Local sample users, used when the GitHub API is unavailable
+ * (rate-limited, offline, etc.). IDs are deliberately high to avoid
+ * colliding with real GitHub account IDs.
+ */
+export const fallbackUsers: GitHubUser[] = [
+  {
+    id: 900001,
+    login: 'ada',
+    name: 'Ada Lovelace',
+    avatar_url: null,
+    html_url: null,
+    type: 'User',
+    bio: 'First programmer. Wrote the first algorithm intended for a machine.',
+    company: 'Analytical Engine Co.',
+    location: 'London, UK',
+    blog: null,
+    public_repos: 12,
+    followers: 1843,
+    following: 3,
+    created_at: '2024-01-15T00:00:00Z',
+  },
+  {
+    id: 900002,
+    login: 'grace',
+    name: 'Grace Hopper',
+    avatar_url: null,
+    html_url: null,
+    type: 'User',
+    bio: 'Inventor of the compiler. Coined the term "debugging".',
+    company: 'US Navy',
+    location: 'Arlington, VA',
+    blog: null,
+    public_repos: 27,
+    followers: 2210,
+    following: 8,
+    created_at: '2024-03-02T00:00:00Z',
+  },
+  {
+    id: 900003,
+    login: 'linus',
+    name: 'Linus Torvalds',
+    avatar_url: null,
+    html_url: null,
+    type: 'User',
+    bio: 'Created Linux and Git.',
+    company: 'Linux Foundation',
+    location: 'Portland, OR',
+    blog: 'kernel.org',
+    public_repos: 9,
+    followers: 240000,
+    following: 0,
+    created_at: '2024-06-21T00:00:00Z',
+  },
+  {
+    id: 900004,
+    login: 'margaret',
+    name: 'Margaret Hamilton',
+    avatar_url: null,
+    html_url: null,
+    type: 'User',
+    bio: 'Led the software team for the Apollo guidance computer.',
+    company: 'MIT Instrumentation Lab',
+    location: 'Cambridge, MA',
+    blog: null,
+    public_repos: 5,
+    followers: 980,
+    following: 2,
+    created_at: '2025-02-09T00:00:00Z',
+  },
+]

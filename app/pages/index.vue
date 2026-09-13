@@ -1,8 +1,9 @@
 <script setup lang="ts">
 const name = ref<string>('World')
 
-useHead({
+usePageSeo({
   title: 'Home',
+  description: 'A Nuxt 4 + Tailwind CSS starter with TypeScript, file-based routing and a typed API.',
 })
 </script>
 
