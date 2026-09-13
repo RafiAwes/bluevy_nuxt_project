@@ -1,6 +1,5 @@
 import tailwindcss from '@tailwindcss/vite'
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
@@ -17,10 +16,10 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    githubToken: '', // set via NUXT_GITHUB_TOKEN env var
+    githubToken: '',
     public: {
       siteName: 'NuxtApp',
-      siteUrl: 'http://localhost:3000', // override with NUXT_PUBLIC_SITE_URL in production
+      siteUrl: 'http://localhost:3000',
     },
   },
 

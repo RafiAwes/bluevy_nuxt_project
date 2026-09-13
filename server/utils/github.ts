@@ -1,8 +1,3 @@
-/**
- * Thin wrapper around GitHub's REST API.
- * Sends the optional token from runtimeConfig so we get 5,000 req/h instead of 60,
- * and normalises GitHub's errors into friendly HTTP errors for the client.
- */
 export async function githubFetch<T>(path: string, query?: Record<string, string | number>): Promise<T> {
   const { githubToken } = useRuntimeConfig()
 

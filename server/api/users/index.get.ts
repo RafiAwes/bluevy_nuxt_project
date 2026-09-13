@@ -7,12 +7,10 @@ function toSummary({ id, login, avatar_url, html_url, type }: GitHubUserSummary)
   return { id, login, avatar_url, html_url, type }
 }
 
-// Only successful GitHub responses are cached (errors never are), so once
-// GitHub recovers we stop serving the fallback immediately.
+// Errors are never cached, so the fallback is dropped as soon as GitHub recovers
 const fetchGitHubUsers = defineCachedFunction(
   async (q: string): Promise<GitHubUserSummary[]> => {
     if (q) {
-      // Search API matches login, name and email by default
       const res = await githubFetch<{ items: GitHubUserSummary[] }>('/search/users', { q, per_page: PER_PAGE })
       return res.items.map(toSummary)
     }

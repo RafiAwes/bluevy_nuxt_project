@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Custom theme tokens — extend Tailwind's design system here */
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }

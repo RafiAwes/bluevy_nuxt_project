@@ -49,7 +49,6 @@ const model = defineModel<string>({ required: true })
 </template>
 
 <style scoped>
-/* Hide the browser's native clear button — we render our own */
 .search-input::-webkit-search-cancel-button {
   display: none;
 }

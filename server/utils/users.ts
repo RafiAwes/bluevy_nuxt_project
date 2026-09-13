@@ -1,10 +1,6 @@
 import type { GitHubUser } from '~~/shared/types/user'
 
-/**
- * Local sample users, used when the GitHub API is unavailable
- * (rate-limited, offline, etc.). IDs are deliberately high to avoid
- * colliding with real GitHub account IDs.
- */
+// IDs start at 900001 so they never collide with real GitHub account IDs
 export const fallbackUsers: GitHubUser[] = [
   {
     id: 900001,

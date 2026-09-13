@@ -1,14 +1,9 @@
 interface PageSeoOptions {
   title: MaybeRefOrGetter<string>
   description: MaybeRefOrGetter<string>
-  /** Absolute or site-relative image URL for social cards */
   image?: MaybeRefOrGetter<string | undefined>
 }
 
-/**
- * Sets the page title, description and social-card meta in one call.
- * Values can be plain strings, refs or getters so async data works.
- */
 export function usePageSeo(options: PageSeoOptions) {
   const config = useRuntimeConfig()
   const route = useRoute()

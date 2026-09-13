@@ -4,11 +4,9 @@ import type { UsersResponse } from '~~/shared/types/user'
 const route = useRoute()
 const router = useRouter()
 
-// Search term: seeded from ?q= so links are shareable, debounced before fetching
 const search = ref(typeof route.query.q === 'string' ? route.query.q : '')
 const debouncedSearch = useDebouncedRef(search, 350)
 
-// Keep the URL in sync without adding history entries on every keystroke
 watch(debouncedSearch, (q) => {
   router.replace({ query: q ? { q } : {} })
 })

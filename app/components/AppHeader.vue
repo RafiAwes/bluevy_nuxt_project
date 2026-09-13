@@ -13,7 +13,6 @@ const links: NavLink[] = [
 const mobileOpen = ref(false)
 const route = useRoute()
 
-// Close the mobile menu whenever the route changes
 watch(() => route.path, () => {
   mobileOpen.value = false
 })
@@ -26,7 +25,6 @@ watch(() => route.path, () => {
         Nuxt<span class="text-emerald-600">App</span>
       </NuxtLink>
 
-      <!-- Desktop links -->
       <ul class="hidden items-center gap-1 sm:flex">
         <li v-for="link in links" :key="link.to">
           <NuxtLink
@@ -39,7 +37,6 @@ watch(() => route.path, () => {
         </li>
       </ul>
 
-      <!-- Mobile toggle -->
       <button
         type="button"
         class="rounded-md p-2 text-gray-600 hover:bg-gray-100 sm:hidden"
@@ -55,7 +52,6 @@ watch(() => route.path, () => {
       </button>
     </nav>
 
-    <!-- Mobile menu -->
     <ul v-if="mobileOpen" id="mobile-menu" class="space-y-1 border-t border-gray-200 px-4 py-3 sm:hidden">
       <li v-for="link in links" :key="link.to">
         <NuxtLink
